@@ -9,15 +9,14 @@
 		<div class="task-list">
 			<ul>
 				<?php require("includes/connect.php");
-				$mysqli = new mysqli('localhost', 'root', 'root', 'tasks');
+				$mysqli = new mysqli('localhost', 'root', 'root', 'Todo2');
 				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 				if ($result = $mysqli->query($query)) {
 					$numrows = $result->num_rows;
 					if ($numrows>0) {
 						while($row = $result->fetch_assoc()){
 							$task_id = $row['id'];
-							$task_name = $row["task"];
-
+							$task_name = $row['task'];
 
 							echo '<li>
 							<span>'.$task_name. '</span>
@@ -30,7 +29,7 @@
 				?>
 			</ul>
 		</div>
-		<form>
+		<form class="add-new-task" autocomplete="off">
 			<input type="text" name="new-task" placeholder="Add new item...">
 		</form>
 	</div>
@@ -45,8 +44,8 @@
 
 			if (new_task != '') {
 				$.post('includes/add-task.php', { task: new_task}, function(data){
-					$('add-new-task input[name=new-task]').val();
-						$(data).appendTo('task-list ul').hide().fadeIn();
+					$('add-new-task input [name=new-task]').val();
+						$(data).appendTo('.task-list ul').hide().fadeIn();
 				});
 			}		
 			return false;	
@@ -58,7 +57,7 @@
 		var task_id = $(this).alert['id'];
 
 		$.post('includes/delete-task.php', {id: task_id}, function(){
-		current_element.parent().fadeOut("fast", function)
+		current_element.parent().fadeOut("fast", function(){
 			$(this).remove();
 		});
 	});
