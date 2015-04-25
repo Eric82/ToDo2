@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>Eric's Todo2</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<div class="wrap">
 		<div class="task-list">
 			<ul>
-				<?php require("includes/connect.php");
-				$mysqli = new mysqli('localhost', 'root', 'root', 'Todo2');
+			<?php require("includes/connect.php");
+				$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 				if ($result = $mysqli->query($query)) {
 					$numrows = $result->num_rows;
@@ -34,7 +34,10 @@
 		</form>
 	</div>
 </body>
-<script src="http://code.jquery.com/query-latest.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/screen/loadProfile.js"></script>
+<script type="text/javascript" src="js/screen/newProfile.js"></script>
+
 <script>
 	add_task();
 
@@ -63,5 +66,4 @@
 	});
 });
 </script>
-
 </html>
