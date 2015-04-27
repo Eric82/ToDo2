@@ -41,7 +41,7 @@
 <script>
 	add_task();
 
-	function add_task(){
+	function add_task() {
 		$('add-new-task').submit(function() {
 			var new_task = $('.add-new-task input[name=new-task]').val();
 
