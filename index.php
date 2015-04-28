@@ -1,7 +1,4 @@
-<?php 
-	require_once(__DIR__ . "/model/config.php");
-?>
-<html>
+<!DOCTYPE html>
 <head>
 <header>
 	<button type="button">
