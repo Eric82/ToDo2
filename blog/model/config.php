@@ -7,7 +7,7 @@
     $host = "localhost";
     $username = "root";
     $password = "root";
-    $database = "tasks";
+    $database = "Todo2";
     
     if(!isset($_SESSION["connection"])) {
         $connection = new Database($host, $username, $password, $database);

@@ -1,6 +1,6 @@
 <?php
     require_once(__DIR__ . "/controller/login-verify.php");
-    require_once(__DIR__ . "/home.php");
+    require_once(__DIR__ . "/index.php");
     //if(authenticateUser()) {
     //  require_once(__DIR__ . "/view/navigation.php");
     //}

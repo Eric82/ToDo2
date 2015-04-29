@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php 
+	require_once(__DIR__ . "/model/config.php");
+?>
 <head>
 <header>
 	<button type="button">
