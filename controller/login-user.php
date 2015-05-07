@@ -17,3 +17,18 @@
     } else {
         echo "Invalid username and password2";
     }
+?>
+
+<html>
+<head>
+  <header>
+  <button type="button">
+    <a href="<?php echo $path . "main.php"?>">Continue</a>
+  </button>
+  </header>
+  <title></title>
+</head>
+<body>
+
+</body>
+</html>

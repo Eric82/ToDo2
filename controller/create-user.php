@@ -26,3 +26,17 @@
     } else {
         echo "Username already exists";
     }
+?>
+
+<html>
+<head>
+  <header>
+  <button type="button">
+    <a href="<?php echo $path . "login.php"?>">Login</a>
+  </button>
+  </header>
+  <title></title>
+</head>
+<body>
+</body>
+</html> 
