@@ -12,7 +12,7 @@
 	</button>
 </header>
 	<title>Eric's Todo2</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
 <body>
 </html>
